@@ -4,6 +4,8 @@ import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import prisma from "$lib/server/prisma/client";
 import { GITHUB_ID, GITHUB_SECRET } from "$env/static/private";
 
+import type { SessionWithId } from "./app";
+
 export const handle = SvelteKitAuth({
     adapter: PrismaAdapter(prisma),
     providers: [
@@ -14,7 +16,7 @@ export const handle = SvelteKitAuth({
     ],
     callbacks: {
         session: async ({ session, user }) => {
-            session.user.id = user.id;
+            (<SessionWithId>session).user.id = user.id;
             return session;
         }
     }
