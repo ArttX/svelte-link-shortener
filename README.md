@@ -1,38 +1,36 @@
-# create-svelte
+# Svelte Link Shortner
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Reason
 
-## Creating a project
+I am experimenting with other front-end frameworks and wanted to try do something with SvelteKit.\
+I have idea to create multiple versions of this page in different frameworks.
+If new versions of this project will be created, it will be linked [below](#other-versions).
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Stack
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+-   [Typescript](https://www.typescriptlang.org/)
+-   [SvelteKit](https://kit.svelte.dev/)
+-   [Prisma](https://www.prisma.io/) with [SQLite3](https://www.sqlite.org/index.html)
+-   [Auth.js](https://authjs.dev/)
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## What this is?
 
-## Developing
+This is web page for shortening links.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Logged in user can add full link and enter shorter version of this link, it need to be unique.
 
-```bash
-npm run dev
+Logged in user can:
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+-   view created short links
+-   view times, this links was used
+-   delete short links
 
-## Building
+Non logged user can:
 
-To create a production version of your app:
+-   use knows short links to be redirected to different page
 
-```bash
-npm run build
-```
+Logging in is now implemented with Github OAuth2
 
-You can preview the production build with `npm run preview`.
+## Other versions
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+_Coming soon_
