@@ -13,7 +13,7 @@ declare global {
 
 type DefaultSessionUser = DefaultUser & { id: string };
 interface SessionWithId extends Session {
-	user: DefaultSessionUser
+	user: DefaultSessionUser;
 }
 
 export { SessionWithId };
